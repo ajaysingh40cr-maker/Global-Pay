@@ -210,9 +210,13 @@ margin-bottom:12px;
 }
 
 .setup-box p,
-.notice p,
 .setup-box li{
 color:#e5e7eb;
+line-height:1.7;
+}
+
+.notice p{
+color:#ff4d4d;
 line-height:1.7;
 }
 
