@@ -349,3 +349,26 @@ color:#111;
 body.light-mode .label{
 color:#111;
   }
+.submit-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#7b61ff,#4fc3f7);
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.back-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#ff9800,#ff5722);
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+  }
