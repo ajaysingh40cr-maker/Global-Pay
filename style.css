@@ -6,59 +6,103 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#08111f;
+background:linear-gradient(135deg,#050816,#0b132b,#1c2541);
 color:#fff;
+min-height:100vh;
 }
 
 .topbar{
-background:linear-gradient(90deg,#ff9800,#ff3d57);
-padding:15px;
+padding:16px;
 text-align:center;
 font-weight:bold;
 font-size:18px;
+background:linear-gradient(90deg,#ff8a00,#ff2d55);
+color:#fff;
+box-shadow:0 0 20px rgba(255,100,0,.4);
 }
 
 .container{
-width:90%;
-max-width:430px;
-margin:25px auto;
+max-width:420px;
+margin:20px auto;
+padding:15px;
 }
 
-h1{
-text-align:center;
-font-size:38px;
-margin-bottom:5px;
-}
-
-.card{
-background:#1b2335;
-padding:22px;
-border-radius:18px;
-margin:20px 0;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.4);
-}
-
-.login{
-background:#1b2335;
-padding:20px;
-border-radius:18px;
-}
-
-.login h2{
+.top-right{
+display:flex;
+justify-content:flex-end;
 margin-bottom:15px;
+}
+
+.admin-btn{
+padding:10px 18px;
+border:none;
+border-radius:25px;
+background:linear-gradient(90deg,#FFD700,#00C6FF);
+color:#111;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 20px rgba(255,215,0,.5);
+}
+
+.logo{
+font-size:52px;
 text-align:center;
+font-weight:900;
+background:linear-gradient(90deg,#FFD700,#FF9800,#00E5FF,#7C4DFF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+letter-spacing:2px;
+margin-top:10px;
+}
+
+.subtitle{
+text-align:center;
+font-size:18px;
+color:#d9e6ff;
+margin-bottom:20px;
+}
+
+.card,
+.login-box{
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(12px);
+padding:20px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.12);
+box-shadow:0 0 25px rgba(0,198,255,.2);
+margin-bottom:20px;
+}
+
+.card h2{
+color:#FFD700;
+text-align:center;
+margin-bottom:8px;
+}
+
+.card p{
+color:#cce8ff;
+text-align:center;
+}
+
+.login-box h2{
+text-align:center;
+color:#FFD700;
+margin-bottom:15px;
 }
 
 input{
 width:100%;
 padding:14px;
 margin:10px 0;
-background:#111827;
 border:none;
 border-radius:12px;
+background:#101827;
 color:#fff;
 font-size:16px;
+}
+
+input::placeholder{
+color:#9ca3af;
 }
 
 .btn{
@@ -66,127 +110,17 @@ width:100%;
 padding:15px;
 margin-top:12px;
 border:none;
-border-radius:12px;
-background:linear-gradient(90deg,#7b3ff2,#47d7ff);
-color:#fff;
+border-radius:14px;
 font-size:17px;
 font-weight:bold;
+background:linear-gradient(90deg,#7C4DFF,#00C6FF,#FFD700);
+color:#fff;
 cursor:pointer;
-}
-
-.btn:hover{
-opacity:.95;
+box-shadow:0 0 20px rgba(0,198,255,.35);
 }
 
 #msg{
-margin-top:10px;
+margin-top:12px;
 text-align:center;
-color:#ff5757;
-}
-/* PREMIUM TOP BUTTON */
-.top-bar{
-display:flex;
-justify-content:flex-end;
-margin:15px;
-}
-
-.admin-btn{
-background:linear-gradient(90deg,#FFD700,#00C6FF);
-color:#111;
 font-weight:bold;
-padding:10px 18px;
-border:none;
-border-radius:25px;
-box-shadow:0 0 15px #FFD700;
-cursor:pointer;
 }
-
-/* PREMIUM LOGO */
-h1{
-font-size:60px;
-font-weight:900;
-text-align:center;
-background:linear-gradient(90deg,#FFD700,#FF9800,#00E5FF,#7C4DFF);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-text-shadow:0 0 25px rgba(255,255,255,.4);
-letter-spacing:3px;
-}
-
-/* SUBTITLE */
-.container p:first-of-type{
-color:#e0e0e0;
-font-size:22px;
-text-align:center;
-}
-
-/* PREMIUM CARD */
-.card,.login{
-background:rgba(255,255,255,.06);
-backdrop-filter:blur(15px);
-border:1px solid rgba(255,215,0,.4);
-border-radius:22px;
-box-shadow:0 0 25px rgba(0,198,255,.25);
-}
-
-/* PREMIUM BUTTONS */
-.btn{
-background:linear-gradient(90deg,#7C4DFF,#00C6FF,#FFD700);
-color:#fff;
-font-weight:bold;
-border:none;
-border-radius:15px;
-box-shadow:0 0 20px rgba(0,198,255,.5);
-transition:.3s;
-}
-
-.btn:hover{
-transform:scale(1.04);
-}
-
-/* INPUTS */
-input{
-background:#101827;
-border:1px solid #00C6FF;
-color:#fff;
-border-radius:12px;
-}
-
-input::placeholder{
-color:#bbb;
-}
-
-/* POPUP */
-.popup{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.8);
-justify-content:center;
-align-items:center;
-z-index:9999;
-}
-
-.popup-box{
-background:#111827;
-color:#fff;
-padding:25px;
-border-radius:20px;
-width:90%;
-max-width:380px;
-text-align:center;
-border:2px solid gold;
-box-shadow:0 0 25px gold;
-}
-
-.popup-box button{
-margin-top:15px;
-padding:10px 20px;
-border:none;
-border-radius:12px;
-background:linear-gradient(90deg,#FFD700,#00C6FF);
-font-weight:bold;
-  }
