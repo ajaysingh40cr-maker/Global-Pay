@@ -117,3 +117,30 @@ transition:.2s;
 .helpline button:hover{
 background:#08662f;
 }
+.dark-mode{
+background:#111827;
+color:#ffffff;
+}
+
+.dark-mode .card,
+.dark-mode .setup-box,
+.dark-mode .notice,
+.dark-mode .helpline{
+background:#1f2937;
+color:#ffffff;
+}
+
+.dark-mode .top-header{
+background:#065f46;
+}
+
+.dark-mode .top-buttons button{
+background:#ffffff;
+color:#065f46;
+}
+
+.dark-mode .notice p,
+.dark-mode .setup-box p,
+.dark-mode .setup-box li{
+color:#e5e7eb;
+}
