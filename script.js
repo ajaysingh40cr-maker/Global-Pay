@@ -10,7 +10,7 @@ msg.style.color="#00ff88";
 msg.innerHTML="✅ Login Successful...";
 
 setTimeout(function(){
-window.location.href="dashboard.html";
+window.location.href="home.html";
 },1000);
 
 }else{
