@@ -32,7 +32,7 @@
     globalpay@upi
 </div>
 
-<button>Copy UPI ID</button>
+<button onclick="copyUPI()">Copy UPI ID</button>
 
 <br><br>
 
@@ -90,6 +90,12 @@ after verification by the Panel Admin.
 </button>
 
 </div>
-
+<script>
+function copyUPI() {
+    const upi = document.getElementById("upiId").innerText;
+    navigator.clipboard.writeText(upi);
+    alert("✅ UPI ID Copied");
+}
+</script>
 </body>
   </html>
