@@ -22,5 +22,13 @@ msg.innerHTML="❌ Invalid User ID or Password";
 
 }
 function toggleTheme() {
-    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("light-mode");
+
+    const btn = document.querySelector(".top-buttons button");
+
+    if (document.body.classList.contains("light-mode")) {
+        btn.innerHTML = "☀️";
+    } else {
+        btn.innerHTML = "🌙";
+    }
 }
