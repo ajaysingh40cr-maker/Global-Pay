@@ -21,3 +21,6 @@ msg.innerHTML="❌ Invalid User ID or Password";
 }
 
 }
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+}
