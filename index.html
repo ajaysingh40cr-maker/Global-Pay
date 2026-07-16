@@ -6,6 +6,7 @@
 <title>GLOBAL PAY</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="topbar">
@@ -13,21 +14,22 @@
 </div>
 
 <div class="container">
-  <div class="top-bar">
-    <button class="admin-btn" onclick="showAdmin()">🛡 PANEL ADMIN</button>
-  </div>
 
-<h1>GLOBAL PAY</h1>
-<p>Secure Payments Panel</p>
+<div class="top-right">
+<button class="admin-btn" onclick="location.href='admin.html'">
+🛡 PANEL ADMIN
+</button>
+</div>
+
+<h1 class="logo">GLOBAL PAY</h1>
+<p class="subtitle">Secure Payments Panel</p>
 
 <div class="card">
 <h2>ACCOUNT FUNDS</h2>
 <p>Live Activation & Earn Commission</p>
 </div>
 
-<button class="btn" id="adminBtn">🛡 PANEL ADMIN DETAILS</button>
-
-<div class="login">
+<div class="login-box">
 
 <h2>LOGIN</h2>
 
@@ -35,39 +37,18 @@
 
 <input type="password" id="password" placeholder="Password">
 
-<button class="btn" id="loginBtn">LOGIN</button>
+<button class="btn" onclick="login()">LOGIN</button>
 
-<button class="btn">📱 DOWNLOAD ANDROID APP</button>
+<button class="btn">
+📱 DOWNLOAD ANDROID APP
+</button>
 
 <p id="msg"></p>
 
 </div>
-<div id="adminPopup" class="popup" style="display:none;">
-  <div class="popup-box">
-    <h2>Customer Support</h2>
 
-    <p><b>Primary Number</b><br>+91 9572025885</p>
-    <p><b>Secondary Number</b><br>+91 8294497070</p>
-    <p><b>Email</b><br>ajaysingh40cr@gmail.com</p>
-
-    <p><b>Company Address</b><br>
-    Global Pay Support Office<br>
-    Office 1204, Bay Square,<br>
-    Business Bay,<br>
-    Dubai, United Arab Emirates</p>
-
-    <button onclick="hideAdmin()">Close</button>
-  </div>
 </div>
 
-<script>
-function showAdmin(){
-  document.getElementById("adminPopup").style.display="flex";
-}
-function hideAdmin(){
-  document.getElementById("adminPopup").style.display="none";
-}
-  </script>
 <script src="script.js"></script>
 
 </body>
