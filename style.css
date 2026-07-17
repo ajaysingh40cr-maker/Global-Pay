@@ -285,19 +285,12 @@ margin:5px 0;
   }
 
 .logo{
-  display:flex;
-align-items:center;
-gap:10px;
-  
-    font-size:34px;
+    font-size:48px;
     font-weight:900;
     margin:0;
-    white-space:nowrap;
-    letter-spacing:2px;
-    background:linear-gradient(90deg,#00E5FF,#00BFFF,#4D7DFF,#8A2BE2);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    text-shadow:0 0 20px rgba(0,180,255,.5);
+    text-transform:uppercase;
+    color:#00BFFF;
+    text-shadow:0 0 15px #00BFFF;
 }
 
 .top-header{
