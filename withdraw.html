@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Withdraw - Global Pay</title>
 
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#08111f;
+    color:#fff;
+}
+.container{
+    max-width:400px;
+    margin:30px auto;
+    background:#1c2238;
+    padding:20px;
+    border-radius:15px;
+}
+h2{
+    text-align:center;
+    color:#FFD700;
+}
+input{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#FFD700;
+    color:#000;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.note{
+    color:#FFD700;
+    text-align:center;
+    margin:15px 0;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Withdraw Request</h2>
+
+<p class="note">Minimum Withdraw: ₹5,000</p>
+
+<input type="number" id="amount" placeholder="Enter Amount" min="5000">
+
+<input type="text" placeholder="UPI ID">
+
+<button onclick="withdraw()">Submit Withdraw</button>
+
+</div>
+
+<script>
+function withdraw(){
+
+let amount=document.getElementById("amount").value;
+
+if(amount<5000){
+alert("Minimum Withdraw Amount is ₹5000");
+return;
+}
+
+alert("Withdraw Request Submitted Successfully");
+
+}
+</script>
+
+</body>
+</html>
