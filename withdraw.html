@@ -257,46 +257,7 @@ Minimum Withdraw : ₹5,000
     </div>
     </div>
 
-<script>
-const amountInput = document.getElementById("amount");
-const showAmount = document.getElementById("showAmount");
-const finalAmount = document.getElementById("finalAmount");
 
-amountInput.addEventListener("input", function () {
-    let amount = Number(this.value) || 0;
-    showAmount.innerHTML = "₹" + amount.toLocaleString();
-    finalAmount.innerHTML = "₹" + amount.toLocaleString();
-});
-
-function submitWithdraw() {
-    let amount = Number(amountInput.value);
-
-    if (!amount) {
-        alert("Please enter withdrawal amount.");
-        return;
-    }
-
-    if (amount < 5000) {
-        alert("❌ Minimum withdrawal amount is ₹5,000.");
-        return;
-    }
-
-    if (amount > 100000) {
-        alert("❌ Maximum withdrawal amount is ₹1,00,000.");
-        return;
-    }
-
-    alert(
-        "✅ Withdrawal Request Submitted!\n\n" +
-        "Amount: ₹" + amount.toLocaleString() +
-        "\nStatus: Pending\n" +
-        "Processing Time: 24–48 Hours"
-    );
-
-    amountInput.value = "";
-    showAmount.innerHTML = "₹0";
-    finalAmount.innerHTML = "₹0";
-}
 <script>
 const amountInput = document.getElementById("amount");
 const showAmount = document.getElementById("showAmount");
@@ -361,7 +322,56 @@ return;
 }
 
 }
+function submitWithdraw() {
 
+let amount = Number(amountInput.value);
+
+if (!amount) {
+    alert("Please enter withdrawal amount.");
+    return;
+}
+
+if (amount < 5000) {
+    alert("❌ Minimum withdrawal amount is ₹5,000.");
+    return;
+}
+
+if (amount > 100000) {
+    alert("❌ Maximum withdrawal amount is ₹1,00,000.");
+    return;
+}
+
+if (paymentMethod.value == "bank") {
+
+    if (
+        document.getElementById("holderName").value.trim() == "" ||
+        document.getElementById("bankName").value.trim() == "" ||
+        document.getElementById("accountNumber").value.trim() == "" ||
+        document.getElementById("confirmAccount").value.trim() == "" ||
+        document.getElementById("ifsc").value.trim() == ""
+    ) {
+        alert("❌ Fill all bank details.");
+        return;
+    }
+
+    if (
+        document.getElementById("accountNumber").value !=
+        document.getElementById("confirmAccount").value
+    ) {
+        alert("❌ Account numbers do not match.");
+        return;
+    }
+}
+
+if (paymentMethod.value == "upi") {
+
+    let upi = document.getElementById("upiId").value.trim();
+
+    if (upi == "" || !upi.includes("@")) {
+        alert("❌ Enter a valid UPI ID.");
+        return;
+    }
+ }
 alert(
 "✅ Withdrawal Request Submitted!\n\n"+
 "Amount: ₹"+amount.toLocaleString()+
@@ -389,5 +399,3 @@ document.getElementById("wallet").value="";
 
 </body>
 </html>
-    </body>
-    </html>
