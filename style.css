@@ -426,40 +426,51 @@ color:#111;
   }
 
 .top-header{
-    padding:20px 15px;
-    background:#111827;
-}
-
-.header-top{
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
+    padding:18px;
+    gap:20px;
 }
 
-.logo{
-    font-size:52px;
-    font-weight:900;
-    line-height:0.9;
+.header-left{
+    flex:1;
+}
 
-    background:linear-gradient(90deg,#ffffff,#8dd9ff,#00bfff,#008cff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+.header-right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:16px;
+}
 
-    text-shadow:0 0 18px rgba(0,170,255,.5);
+.top-buttons{
+    display:flex;
+    gap:12px;
+}
+
+.top-buttons button{
+    width:110px;
+    height:48px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#FFD54F,#FFC107);
+    color:#111;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
 }
 
 .profile-btn{
-    width:52px;
-    height:52px;
+    width:54px;
+    height:54px;
     border-radius:50%;
-    border:2px solid #00cfff;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
-    background:#1d2747;
-    box-shadow:0 0 18px #00cfff;
+    border:3px solid #00d4ff;
+    box-shadow:0 0 18px #00d4ff;
+    flex-shrink:0;
 }
 
 .profile-btn img{
@@ -467,41 +478,39 @@ color:#111;
     filter:invert(1);
 }
 
-.top-buttons{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    margin-top:18px;
+.logo{
+    font-size:62px;
+    line-height:0.9;
 }
 
-.top-buttons button{
+@media (max-width:480px){
 
-    width:110px;
-    height:48px;
-
-    border:none;
-    border-radius:14px;
-
-    background:linear-gradient(180deg,#ffd64d,#ffb700);
-
-    color:#111;
-
-    font-weight:700;
-    font-size:16px;
-
-    cursor:pointer;
+.top-header{
+    flex-direction:row;
+    align-items:flex-start;
 }
 
-@media(max-width:480px){
+.header-right{
+    gap:10px;
+}
 
 .logo{
-font-size:46px;
+    font-size:48px;
+}
+
+.top-buttons{
+    gap:8px;
 }
 
 .top-buttons button{
-width:105px;
-height:46px;
-font-size:15px;
+    width:95px;
+    height:46px;
+    font-size:15px;
 }
 
+.profile-btn{
+    width:52px;
+    height:52px;
 }
+
+  }
