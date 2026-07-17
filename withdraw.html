@@ -145,37 +145,76 @@ Minimum Withdraw : ₹5,000
 <button onclick="amount.value=0">All Balance</button>
 
 </div>
+<label>Payment Method</label>
 
-<label>Select Method</label>
+<select id="paymentMethod" onchange="changeMethod()">
 
-<select>
+<option value="bank">🏦 Bank Transfer</option>
 
-<option>Bank Transfer</option>
+<option value="upi">📱 UPI</option>
 
-<option>UPI</option>
+<option value="binance">🪙 Binance (USDT)</option>
 
- <option>Binance (USDT)</option>
-    
 </select>
+
+<!-- Bank -->
+
+<div id="bankSection">
+
 <label>Account Holder Name</label>
-<input type="text" placeholder="Enter Account Holder Name">
+<input type="text" id="holderName">
 
 <label>Bank Name</label>
-<input type="text" placeholder="Enter Bank Name">
+<input type="text" id="bankName">
 
 <label>Account Number</label>
-<input type="number" placeholder="Enter Account Number">
+<input type="number" id="accountNumber">
 
 <label>Confirm Account Number</label>
-<input type="number" placeholder="Re-enter Account Number">
+<input type="number" id="confirmAccount">
 
 <label>IFSC Code</label>
-<input type="text" placeholder="Enter IFSC Code">
-
-<label>UPI ID (Optional)</label>
-<input type="text" placeholder="example@upi">
+<input type="text" id="ifsc">
 
 </div>
+
+<!-- UPI -->
+
+<div id="upiSection" style="display:none;">
+
+<label>UPI ID</label>
+<input type="text" id="upiId" placeholder="example@upi">
+
+</div>
+
+<!-- Binance -->
+
+<div id="binanceSection" style="display:none;">
+
+<label>Network</label>
+
+<select id="network">
+
+<option>TRC20</option>
+
+<option>BEP20</option>
+
+<option>ERC20</option>
+
+</select>
+
+<label>Binance UID</label>
+<input type="text" id="binanceUid">
+
+<label>USDT Wallet Address</label>
+<input type="text" id="wallet">
+
+<p><b>Exchange Rate:</b> 1 USDT = ₹87</p>
+
+<p><b>You Receive:</b>
+<span id="usdtAmount">0 USDT</span></p>
+
+ </div>
 
 <div class="card">
 
