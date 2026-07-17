@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Withdrawal Status</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#081120;
+color:white;
+}
+
+.header{
+background:#10213d;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 3px 12px rgba(0,0,0,.4);
+position:sticky;
+top:0;
+}
+
+.header h2{
+font-size:22px;
+}
+
+.icon{
+font-size:24px;
+cursor:pointer;
+}
+
+.container{
+padding:15px;
+max-width:550px;
+margin:auto;
+}
+
+.card{
+background:#132544;
+border-radius:18px;
+padding:18px;
+margin-bottom:18px;
+box-shadow:0 4px 15px rgba(0,0,0,.35);
+}
+
+.status{
+text-align:center;
+}
+
+.status h1{
+font-size:26px;
+margin-top:10px;
+color:#FFD700;
+}
+
+.status p{
+margin-top:8px;
+color:#ddd;
+}
+
+.progress{
+width:100%;
+height:12px;
+background:#20385e;
+border-radius:30px;
+overflow:hidden;
+margin-top:18px;
+}
+
+.progress div{
+height:100%;
+width:35%;
+background:linear-gradient(90deg,#00E676,#00BCD4);
+border-radius:30px;
+}
+
+.amount{
+font-size:34px;
+font-weight:bold;
+color:#00E676;
+margin-top:10px;
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.row:last-child{
+border:none;
+}
+
+.title{
+color:#9db4d8;
+}
+
+.value{
+font-weight:bold;
+}
+
+.badge{
+display:inline-block;
+padding:8px 14px;
+border-radius:30px;
+background:#ff9800;
+margin-top:10px;
+font-size:14px
+
+  <div class="card">
+
+<h3>Transaction Details</h3>
+
+<div class="row">
+<span class="title">Transaction ID</span>
+<span class="value">GP872634829</span>
+</div>
+
+<div class="row">
+<span class="title">Reference No</span>
+<span class="value">REF762918</span>
+</div>
+
+<div class="row">
+<span class="title">Request Date</span>
+<span class="value">18 Jul 2026</span>
+</div>
+
+<div class="row">
+<span class="title">Request Time</span>
+<span class="value">10:45 AM</span>
+</div>
+
+<div class="row">
+<span class="title">Account Holder</span>
+<span class="value">********</span>
+</div>
+
+<div class="row">
+<span class="title">Security</span>
+<span class="value">Verified ✅</span>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Processing Timeline</h3>
+
+<div class="timeline-item">
+✅ Withdrawal Request Submitted
+<br>
+<small>18 Jul 2026 • 10:45 AM</small>
+</div>
+
+<div class="timeline-item">
+🟡 Under Verification
+<br>
+<small>Waiting for admin verification...</small>
+</div>
+
+<div class="timeline-item">
+⏳ Payment Queue
+<br>
+<small>Your request is in queue.</small>
+</div>
+
+<div class="timeline-item">
+🏦 Bank Processing
+<br>
+<small>Estimated 24–48 Hours.</small>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Admin Notice</h3>
+
+<div class="notice">
+⚠️ Your withdrawal is under review.
+Please do not submit multiple withdrawal requests.
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Latest Notification</h3>
+
+<div class="timeline-item">
+🔔 No New Notifications
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Withdrawal History</h3>
+
+<div class="timeline-item">
+No History
+</div>
+
+</div>
+
+<button class="btn">
+🔄 Refresh Status
+</button>
+
+<button class="btn">
+📄 Download Receipt
+</button>
+
+<button class="btn">
+📤 Share Receipt
+</button>
+
+  <div class="card">
+
+<h3>📞 Contact Support</h3>
+
+<div class="timeline-item">
+📱 WhatsApp Support
+</div>
+
+<div class="timeline-item">
+💬 Live Chat Support
+</div>
+
+<div class="timeline-item">
+📧 Email Support
+</div>
+
+<div class="timeline-item">
+🕒 Support Available 24×7
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>⭐ Account Status</h3>
+
+<div class="row">
+<span class="title">VIP Status</span>
+<span class="value">VIP 1 ⭐</span>
+</div>
+
+<div class="row">
+<span class="title">KYC Status</span>
+<span class="value">Verified ✅</span>
+</div>
+
+<div class="row">
+<span class="title">Bank Verified</span>
+<span class="value">Yes ✅</span>
+</div>
+
+<div class="row">
+<span class="title">Risk Level</span>
+<span class="value">Low 🟢</span>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>📈 Live Processing</h3>
+
+<div class="progress">
+<div id="liveProgress" style="width:35%;"></div>
+</div>
+
+<p id="progressText" style="margin-top:10px;">
+35% Completed
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>❓ Frequently Asked Questions</h3>
+
+<div class="timeline-item">
+❓ Why is my withdrawal pending?
+<br><small>Verification may take 24–48 hours.</small>
+</div>
+
+<div class="timeline-item">
+❓ Can I cancel my request?
+<br><small>Only before processing starts.</small>
+</div>
+
+<div class="timeline-item">
+❓ When will I receive payment?
+<br><small>Usually within 24–48 hours.</small>
+</div>
+
+</div>
+
+<button class="btn" onclick="location.href='index.html'">
+🏠 Back To Home
+</button>
+
+<script>
+
+let percent = 35;
+
+setInterval(function(){
+
+if(percent < 95){
+
+percent++;
+
+document.getElementById("liveProgress").style.width = percent + "%";
+
+document.getElementById("progressText").innerHTML =
+percent + "% Completed";
+
+}
+
+},4000);
+
+</script>
+
+</div>
+
+</body>
+</html>
