@@ -87,14 +87,20 @@ copyText.select();
 copyText.setSelectionRange(0,99999);
 navigator.clipboard.writeText(copyText.value);
 Swal.fire({
-    icon: "success",
-    title: "Link Copied",
-    text: "Link copied successfully!",
-    confirmButtonColor: "#00bfff",
-    background: "#1b2238",
-    color: "#ffffff",
-    timer: 1800,
-    showConfirmButton: false
+  title: "Link Copied",
+  html: `
+    <div style="text-align:center">
+      <img src="https://media.tenor.com/On7kvXhzml4AAAAj/check.gif" width="90">
+      <p style="font-size:18px;margin-top:12px;">
+        Share link copied successfully!
+      </p>
+    </div>
+  `,
+  background: "#111827",
+  color: "#ffffff",
+  showConfirmButton: false,
+  timer: 2200,
+  width: "340px"
 });
 }
 </script>
