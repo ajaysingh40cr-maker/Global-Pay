@@ -287,10 +287,27 @@ margin:5px 0;
 .logo{
     font-size:48px;
     font-weight:900;
-    margin:0;
     text-transform:uppercase;
-    color:#00BFFF;
-    text-shadow:0 0 15px #00BFFF;
+    margin:0;
+    letter-spacing:3px;
+
+    background:linear-gradient(
+        90deg,
+        #00F5FF,
+        #00BFFF,
+        #4D7DFF,
+        #8A2BE2,
+        #00F5FF
+    );
+
+    background-size:300% 300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:logoGlow 4s linear infinite;
+
+    filter:drop-shadow(0 0 8px #00e5ff)
+           drop-shadow(0 0 20px #4d7dff);
 }
 
 .top-header{
