@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Global Pay - Deposit</title>
 <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -98,35 +99,45 @@ after verification by the Panel Admin.
 
 </div>
 <script>
-function copyUPI() {
-    const upi = document.getElementById("upiId").innerText;
-    navigator.clipboard.writeText(upi);
-    alert("✅ UPI ID Copied");
-    }
-    
 function submitPayment(){
 
 const utr = document.getElementById("utrNumber").value.trim();
 const screenshot = document.getElementById("paymentScreenshot").files.length;
 
 if(utr==="" && screenshot===0){
-alert("Please enter UTR Number and upload payment screenshot.");
+Swal.fire({
+icon:"warning",
+title:"Required",
+text:"Please enter UTR Number and upload payment screenshot."
+});
 return;
 }
 
 if(utr===""){
-alert("Please fill UTR Number.");
+Swal.fire({
+icon:"warning",
+title:"UTR Required",
+text:"Please fill UTR Number."
+});
 return;
 }
 
 if(screenshot===0){
-alert("Please upload payment screenshot.");
+Swal.fire({
+icon:"warning",
+title:"Screenshot Required",
+text:"Please upload payment screenshot."
+});
 return;
 }
 
-alert("Invalid UTR Number.");
+Swal.fire({
+icon:"error",
+title:"Invalid UTR",
+text:"Invalid UTR Number."
+});
 
-}
+    }
 </script>
 </body>
   </html>
