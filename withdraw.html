@@ -308,11 +308,7 @@ usdtAmount.innerHTML=usdt+" USDT";
 });
 paymentMethod.addEventListener("change", changeMethod);
 function submitWithdraw() {
-alert(
-"⚠️ Account Not Active!\n\n" +
-"Withdrawal karne se pehle account activate karna zaroori hai.\n\n" +
-"Please deposit the activation amount first."
-);
+document.getElementById("regPopup").style.display = "block";
 return;
 let amount = Number(amountInput.value);
 
