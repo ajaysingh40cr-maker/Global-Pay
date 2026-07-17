@@ -50,8 +50,15 @@
 
 <label>UTR / Transaction ID</label>
 
-<input type="text" placeholder="Enter UTR Number" maxlength="12" inputmode="numeric" pattern="[0-9]{12}" oninput="this.value=this.value.replace(/[^0-9]/g,'')" style="width:100%;padding:12px;margin-top:8px;border:1px solid #ccc;border-radius:6px;">
-
+<input
+id="utrNumber"
+type="text"
+placeholder="Enter UTR Number"
+maxlength="12"
+inputmode="numeric"
+pattern="[0-9]{12}"
+oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+style="width:100%;padding:12px;margin-top:8px;border:1px solid #ccc;border-radius:6px;">
 <br><br>
 
 <label>Upload Payment Screenshot</label>
@@ -97,7 +104,7 @@ function copyUPI() {
     alert("✅ UPI ID Copied");
 function submitPayment(){
 
-const utr = document.querySelector('input[type="text"]').value.trim();
+const utr = document.getElementById("utrNumber").value.trim();
 const screenshot = document.getElementById("paymentScreenshot").files.length;
 
 if(utr==="" && screenshot===0){
