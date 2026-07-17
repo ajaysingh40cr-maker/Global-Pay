@@ -57,13 +57,14 @@
 <label>Upload Payment Screenshot</label>
 
 <input
+id="paymentScreenshot"
 type="file"
 style="width:100%;margin-top:8px;">
 
 <br><br>
 
-<button class="submit-btn">
-    Submit Payment
+<button class="submit-btn" onclick="submitPayment()">
+Submit Payment
 </button>
 
 </div>
@@ -94,6 +95,28 @@ function copyUPI() {
     const upi = document.getElementById("upiId").innerText;
     navigator.clipboard.writeText(upi);
     alert("✅ UPI ID Copied");
+function submitPayment(){
+
+const utr = document.querySelector('input[type="text"]').value.trim();
+const screenshot = document.getElementById("paymentScreenshot").files.length;
+
+if(utr==="" && screenshot===0){
+alert("Please enter UTR Number and upload payment screenshot.");
+return;
+}
+
+if(utr===""){
+alert("Please fill UTR Number.");
+return;
+}
+
+if(screenshot===0){
+alert("Please upload payment screenshot.");
+return;
+}
+
+alert("Invalid UTR Number.");
+
 }
 </script>
 </body>
