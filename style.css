@@ -395,3 +395,32 @@ color:#111;
     -webkit-text-fill-color:transparent;
     text-shadow:0 0 15px rgba(0,191,255,.5);
 }
+.top-header{
+    position:relative;
+}
+
+.profile-btn{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#162447;
+    border:2px solid #00d4ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 0 15px #00d4ff;
+    transition:.3s;
+}
+
+.profile-btn img{
+    width:28px;
+    filter:invert(1);
+}
+
+.profile-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #00d4ff;
+  }
