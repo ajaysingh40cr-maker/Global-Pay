@@ -86,7 +86,16 @@ const copyText=document.getElementById("link");
 copyText.select();
 copyText.setSelectionRange(0,99999);
 navigator.clipboard.writeText(copyText.value);
-alert("Link Copied Successfully!");
+Swal.fire({
+  icon: "success",
+  title: "Copied!",
+  text: "Link copied successfully.",
+  confirmButtonColor: "#00bfff",
+  background: "#1b2238",
+  color: "#fff",
+  timer: 1800,
+  showConfirmButton: false
+});
 }
 </script>
 
