@@ -297,7 +297,54 @@ function submitWithdraw() {
     showAmount.innerHTML = "₹0";
     finalAmount.innerHTML = "₹0";
 }
-</script>
+<script>
+const amountInput = document.getElementById("amount");
+const showAmount = document.getElementById("showAmount");
+const finalAmount = document.getElementById("finalAmount");
+
+const paymentMethod = document.getElementById("paymentMethod");
+
+const bankSection = document.getElementById("bankSection");
+const upiSection = document.getElementById("upiSection");
+const binanceSection = document.getElementById("binanceSection");
+
+const usdtAmount = document.getElementById("usdtAmount");
+
+function changeMethod(){
+
+bankSection.style.display="none";
+upiSection.style.display="none";
+binanceSection.style.display="none";
+
+if(paymentMethod.value=="bank"){
+bankSection.style.display="block";
+}
+
+if(paymentMethod.value=="upi"){
+upiSection.style.display="block";
+}
+
+if(paymentMethod.value=="binance"){
+binanceSection.style.display="block";
+}
+
+}
+
+changeMethod();
+
+amountInput.addEventListener("input",function(){
+
+let amount=Number(this.value)||0;
+
+showAmount.innerHTML="₹"+amount.toLocaleString();
+
+finalAmount.innerHTML="₹"+amount.toLocaleString();
+
+let usdt=(amount/87).toFixed(2);
+
+usdtAmount.innerHTML=usdt+" USDT";
+
+});
 
 </body>
 </html>
