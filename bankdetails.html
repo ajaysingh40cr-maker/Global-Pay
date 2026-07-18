@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank / UPI Details</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#111827;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.box{
+background:#1f2937;
+padding:25px;
+border-radius:15px;
+width:340px;
+color:#fff;
+}
+
+h2{
+text-align:center;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:none;
+border-radius:8px;
+font-size:15px;
+box-sizing:border-box;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:12px;
+background:#16a34a;
+color:#fff;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+#msg{
+text-align:center;
+margin-top:10px;
+font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+<h2>Bank / UPI Details</h2>
+
+<input type="text" id="holder" placeholder="Account Holder Name">
+
+<input type="text" id="bank" placeholder="Bank Name">
+
+<input type="text" id="account" placeholder="Account Number">
+
+<input type="text" id="ifsc" placeholder="IFSC Code">
+
+<input type="text" id="upi" placeholder="UPI ID">
+
+<button onclick="saveDetails()">Save Details</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+
+function saveDetails(){
+
+localStorage.setItem("holder",document.getElementById("holder").value);
+localStorage.setItem("bank",document.getElementById("bank").value);
+localStorage.setItem("account",document.getElementById("account").value);
+localStorage.setItem("ifsc",document.getElementById("ifsc").value);
+localStorage.setItem("upi",document.getElementById("upi").value);
+
+document.getElementById("msg").innerHTML="✅ Details Saved Successfully";
+document.getElementById("msg").style.color="lime";
+
+setTimeout(()=>{
+window.location.href="profile.html";
+},1000);
+
+}
+
+</script>
+
+</body>
+</html>
