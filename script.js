@@ -32,3 +32,20 @@ function toggleTheme() {
         btn.innerHTML = "🌙";
     }
 }
+// Google Login
+function googleLogin() {
+  firebase.auth().signInWithPopup(provider)
+    .then((result) => {
+      window.location.href = "home.html";
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+}
+
+// Logout
+function logout() {
+  firebase.auth().signOut().then(() => {
+    window.location.href = "index.html";
+  });
+            }
