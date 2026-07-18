@@ -7,31 +7,80 @@
 
 <style>
 body{
-background:#111827;
-font-family:Arial,sans-serif;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-margin:0;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#111827;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
+
 .box{
-background:#1f2937;
-padding:25px;
-border-radius:15px;
-width:320px;
-text-align:center;
-color:#fff;
+    background:#1f2937;
+    padding:25px;
+    border-radius:15px;
+    width:320px;
+    text-align:center;
+    color:#fff;
 }
+
 input{
-width:100%;
-padding:12px;
-margin:15px 0;
-border:none;
-border-radius:8px;
-font-size:16px;
+    width:100%;
+    padding:12px;
+    margin:15px 0;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    box-sizing:border-box;
 }
+
 button{
-width:100%;
-padding:12px;
-background:#f
+    width:100%;
+    padding:12px;
+    background:#16a34a;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#msg{
+    margin-top:15px;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+    <h2>Activate Account</h2>
+
+    <input type="text" id="code" placeholder="Enter Activation Code">
+
+    <button onclick="checkCode()">Activate</button>
+
+    <p id="msg"></p>
+</div>
+
+<script>
+function checkCode(){
+
+    let code = document.getElementById("code").value.trim();
+
+    if(code === "386282"){
+        localStorage.setItem("accountActive","yes");
+        window.location.href = "editprofile.html";
+    }else{
+        document.getElementById("msg").innerHTML = "❌ Invalid Activation Code";
+        document.getElementById("msg").style.color = "red";
+    }
+
+}
+</script>
+
+</body>
+</html>
